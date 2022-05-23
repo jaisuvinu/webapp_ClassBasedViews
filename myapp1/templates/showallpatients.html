@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>showallpatients</title>
+</head>
+<body>
+<h1>All Patients INFO:</h1>
+<table align = "center" border="1px" cellspacing="5px">
+    <tr>
+        <th>UserID</th>
+        <th>FullName</th>
+        <th>Password</th>
+        <th>Phone</th>
+    </tr>
+    {% for p in patient_list %}
+    <tr>
+        <td>{{p.userid}}</td>
+        <td>{{p.fullname}}</td>
+        <td>{{p.password}}</td>
+        <td>{{p.phone}}</td>
+    </tr>
+    {% endfor %}
+</table>
+</body>
+</html>
